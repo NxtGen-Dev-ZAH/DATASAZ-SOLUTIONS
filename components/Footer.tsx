@@ -56,7 +56,7 @@ export default function Footer() {
             <h4 className="text-md font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <li>Islamabad ,Pakistan </li>
-              <li>Calais,France</li>
+              <li>Rawalpindi ,Pakistan</li>
               <li>Phone: +92 (0)319 3718710 </li>
               <li>Email:datasaz.contact@gmail.com</li>
             </ul>
