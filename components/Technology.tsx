@@ -13,7 +13,7 @@ const technologies = [
 ];
 
 const products = [
-  { name: "Printers", price: "from 88,900 pkr", image: "/printers.png" },
+  { name: "Printers", price: "from 88,900 pkr", image: "/printers.jpeg" },
   {
     name: "Small scale services",
     price: "from 10,000 pkr",
