@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 
 const teamMembers = [
-  { name: "Saeed Ahmad", role: "CEO", image: "/team-member-1.jpg" },
-  { name: "Adeel Ahmed ", role: "C0O", image: "/team-member-2.jpg" },
+
+  { name: "Adeel Ahmed ", role: "CEO & COO", image: "/adeel.jpeg" },
   {
     name: "Zaheer Ahmad ",
     role: "Lead Developer",
-    image: "/team-member-3.jpg",
+    image: "/MY IMAGE.jpEg",
   },
 ];
 
@@ -42,15 +42,15 @@ export default function About() {
 
         <section>
           <h2 className="text-2xl font-semibold mb-6">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 relative rounded-full overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    className="rounded-full object-cover"
                   />
                 </div>
                 <h3 className="text-lg font-semibold">{member.name}</h3>

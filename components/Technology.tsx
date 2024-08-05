@@ -1,28 +1,37 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-
 const technologies = [
-  { name: "React", icon: "/react.png" },
-  { name: "Next.js", icon: "/next.png" },
-  { name: "Docker", icon: "/vue.png" },
-  { name: "TensorFlow", icon: "/tensorflow.png" },
-  { name: "PyTorch", icon: "/pytorch.png" },
-  { name: "Node.js", icon: "/nodejs.png" },
-  { name: "Fastapi", icon: "/django.png" },
-  { name: "AWS", icon: "/aws.png" },
-  { name: "Azure", icon: "/azure.png" },
-  { name: "Google Cloud", icon: "/gcp.png" },
+  { name: "Cloud Computing", icon: "/cloud.jpg" },
+  { name: "AI Integration", icon: "/ai.png" },
+  { name: "Backend Development", icon: "/backend.png" },
+  { name: "Frontend Development", icon: "/frontend.png" },
+  { name: "DevOps", icon: "/devops.png" },
+  { name: "Cybersecurity", icon: "/cybersecurity.png" },
+  { name: "Data Analytics", icon: "/data analysis.png" },
+  { name: "Mobile Development", icon: "/mobile.jpeg" },
 ];
 
 const products = [
-  { name: "Product 1", price: "$100", image: "/product1.png" },
-  { name: "Product 2", price: "$200", image: "/product2.png" },
-  { name: "Product 3", price: "$300", image: "/product3.png" },
+  { name: "Printers", price: "from 88,900 pkr", image: "/printers.png" },
+  {
+    name: "Small scale services",
+    price: "from 10,000 pkr",
+    image: "/services.png",
+  },
+  {
+    name: "Tonner & Cartridges",
+    price: "from 10,00 pkr",
+    image: "/tonner.png",
+  },
   // Add more products as needed
-  { name: "Product 1", price: "$100", image: "/product1.png" },
-  { name: "Product 2", price: "$200", image: "/product2.png" },
-  { name: "Product 3", price: "$300", image: "/product3.png" },
+  {
+    name: "Maintenance Interventions",
+    price: "from 10,000 pkr",
+    image: "/maintaince.png",
+  },
+  { name: "Laptop", price: "from 50,000 pkr", image: "/laptop.jpg" },
+  { name: "Computer Parts", price: "from 10,000 pkr", image: "/parts.jpg" },
 ];
 
 export default function Technologies() {
@@ -67,12 +76,12 @@ export default function Technologies() {
             {view === "technologies" &&
               technologies.map((tech, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="w-16 h-16 relative">
+                  <div className="w-28 h-28 relative">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      className="rounded-full object-contain"
                     />
                   </div>
                   <span className="mt-2 text-base font-bold">{tech.name}</span>
@@ -83,15 +92,15 @@ export default function Technologies() {
             {view === "products" &&
               products.map((product, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="w-16 h-16 relative">
+                  <div className="w-32 h-32 relative">
                     <Image
                       src={product.image}
                       alt={product.name}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      className="rounded-full object-contain"
                     />
                   </div>
-                  <span className="mt-2 text-base font-bold">
+                  <span className="mt-2 text-lg font-extrabold">
                     {product.name}
                   </span>
                   <span className="mt-1 text-base font-normal">

@@ -22,11 +22,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-semibold mb-4 text-green-500">
+            <h1 className="text-2xl font-semibold mb-4 text-green-500">
               DataSAZ
               <br />
               <span className="text-cyan-500 ml-12">Solutions</span>
-            </h3>
+            </h1>
             <p className="text-base text-gray-400">
               Providing innovative software solutions to solve market
               challenges.
@@ -55,10 +55,10 @@ export default function Footer() {
           <div>
             <h4 className="text-md font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
-              <li>Islamabad & Remote Work </li>
-              <li>Rawalpindi , Connecticut 35624</li>
-              <li>Phone: 0344444479 </li>
-              <li>Email: gmpkbr@gmail.com</li>
+              <li>Islamabad ,Pakistan </li>
+              <li>Calais,France</li>
+              <li>Phone: +92 (0)319 3718710 </li>
+              <li>Email:datasaz.contact@gmail.com</li>
             </ul>
           </div>
           <div>

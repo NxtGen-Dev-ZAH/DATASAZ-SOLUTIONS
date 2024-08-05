@@ -10,7 +10,7 @@ export default function ContactUs() {
               CONTACT US
             </h1>
             <p className="mb-4 text-gray-600">
-              At DataSAZ Solutions, we're dedicated to providing automated
+              At DataSAZ Solutions, we are dedicated to providing automated
               account information systems and business development services. Our
               team of experts is ready to assist you with cutting-edge
               technology and financial expertise.
@@ -49,7 +49,7 @@ export default function ContactUs() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>gmpkbr@gmail.com</span>
+                <span>datasaz.contact@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <svg

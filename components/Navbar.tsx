@@ -40,12 +40,13 @@ const Navbar: React.FC = () => {
           height={40}
           className="w-auto h-auto object-contain rounded-full"
         />
-        <h1 className="text-black text-4xl font-light ml-4  tracking-[0.1em]">
-          Data
-          <span className="text-green-500  font-black">SAZ</span>
-          <br />
-          <h1 className="text-cyan-600 text-2xl ml-10 font-light">Solutions</h1>
-        </h1>
+        <div className="flex flex-col">
+          <h1 className="text-black text-4xl font-light ml-4  tracking-[0.1em]">
+            Data
+            <span className="text-green-500  font-black">SAZ</span>
+          </h1>
+          <h1 className="text-cyan-600 text-2xl ml-20 font-light">Solutions</h1>
+        </div>
       </div>
       <div className="flex justify-center items-center w-full">
         <Navigation />
