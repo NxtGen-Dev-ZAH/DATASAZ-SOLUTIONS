@@ -2,12 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 const teamMembers = [
-
   { name: "Adeel Ahmed ", role: "CEO & COO", image: "/adeel.jpeg" },
   {
     name: "Zaheer Ahmad ",
     role: "Lead Developer",
-    image: "/MY IMAGE.jpEg",
+    image: "/imagemine.jpeg",
   },
 ];
 
