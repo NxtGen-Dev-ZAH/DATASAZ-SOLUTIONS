@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
             alt="logo"
             width={60}
             height={40}
-            className="w-auto h-auto object-contain rounded-full"
+            className="object-contain rounded-full"
           />
           <div className="flex flex-col">
             <h1 className="text-black text-4xl font-light ml-4 tracking-[0.1em]">

@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-
+import cloud from "../public/cloud.jpg";
 const technologies = [
-  { name: "Cloud Computing", icon: "/cloud.jpg" },
+  { name: "Cloud Computing", icon: cloud },
   { name: "AI Integration", icon: "/ai.png" },
   { name: "Backend Development", icon: "/backend.png" },
   { name: "Frontend Development", icon: "/frontend.png" },
