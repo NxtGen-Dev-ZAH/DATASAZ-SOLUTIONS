@@ -18,16 +18,17 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, children }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black py-8  border-t-2 border-black">
+    <footer className="bg-white text-black py-8  border-t-2 border-black w-screen">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h1 className="text-2xl font-semibold mb-4 text-green-500">
+            <h1 className="text-xl md:text-2xl font-semibold mb-4 text-green-500">
               DataSAZ
               <br />
-              <span className="text-cyan-500 ml-12">Solutions</span>
+              <span className="text-cyan-500 ml-8 md:ml-12">Solutions</span>
             </h1>
-            <p className="text-base text-gray-400">
+            <p className="text-sm md:text-base text-gray-400">
+              {" "}
               Providing innovative software solutions to solve market
               challenges.
             </p>
@@ -55,15 +56,15 @@ export default function Footer() {
           <div>
             <h4 className="text-md font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
-              <li>Islamabad ,Pakistan </li>
-              <li>Rawalpindi ,Pakistan</li>
+              <li>Islamabad, Pakistan </li>
+              <li>Rawalpindi, Pakistan</li>
               <li>Phone: +92 (0)319 3718710 </li>
               <li>Email:datasaz.contact@gmail.com</li>
             </ul>
           </div>
           <div>
             <h4 className="text-md font-semibold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 ">
               <a
                 href="https://www.facebook.com/DataSAZSolutions"
                 className="text-gray-400 hover:text-cyan-400"

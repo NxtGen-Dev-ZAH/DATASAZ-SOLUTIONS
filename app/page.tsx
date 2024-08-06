@@ -8,17 +8,17 @@ import Contact from "@/components/Contact";
 
 export default function Index() {
   return (
-    <div className="bg-green-100 min-h-screen">
+    <div className="bg-green-100 min-h-screen w-screen">
       <div className="glassy-background">
         <Navbar />
         <Home />
-        <div id="services" className="py-8">
+        <div id="services" className="py-12">
           <Services />
         </div>
         <div id="technology" className="py-8">
           <Technology />
         </div>
-        <div id="about us" className="py-8">
+        <div id="about-us" className="py-11">
           <About />
         </div>
         <div id="contact" className="py-8">

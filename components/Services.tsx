@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 const services = [
   {
     name: "Financial Automation",
@@ -49,18 +50,20 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
-    <div className="bg-gradient-to-t from-green-100 via-white to-green-100 min-h-screen text-gray-800  p-8">
+    <div className="bg-gradient-to-t from-green-100 via-white to-green-100 min-h-screen w-screen text-gray-800 p-4 md:p-8">
       <div className="flex justify-center flex-col items-center">
-        <h2 className="text-green-500 text-xl mb-2 font-bold tracking-[0.1em] ">
+        <h2 className="text-green-500 text-xl mb-2 font-bold tracking-[0.1em]">
           OUR SERVICES
         </h2>
-        <h1 className="text-4xl font-bold mb-8">What We Offer</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          What We Offer
+        </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
         {services.map((service) => (
           <button
             key={service.name}
-            className={`p-4 border-2 rounded relative font-bold py-10  ${
+            className={`p-4 border-2 rounded relative font-bold py-6 md:py-10 ${
               selectedService.name === service.name
                 ? "border-green-500 text-green-500 shadow-glow"
                 : "border-gray-300 text-gray-600 hover:border-green-500"
@@ -72,8 +75,10 @@ const Services = () => {
         ))}
       </div>
       <div className="mb-8">
-        <h3 className="text-3xl font-bold mb-4">{selectedService.name}</h3>
-        <p className="text-gray-600 mb-4 text-lg">
+        <h3 className="text-2xl md:text-3xl font-bold mb-4">
+          {selectedService.name}
+        </h3>
+        <p className="text-gray-600 mb-4 text-base md:text-lg">
           {selectedService.description}
         </p>
         {selectedService.link && (

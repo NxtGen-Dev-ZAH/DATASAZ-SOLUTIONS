@@ -1,6 +1,8 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
+
 const technologies = [
   { name: "Cloud Computing", icon: "/cloud.jpg" },
   { name: "AI Integration", icon: "/ai.png" },
@@ -38,14 +40,13 @@ export default function Technologies() {
   const [view, setView] = useState("technologies");
 
   return (
-    <div className="bg-gradient-to-tl from-green-100 via-white to-green-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="bg-gradient-to-tl from-green-100 via-white to-green-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4 md:p-8 w-screen">
       <div className="w-full max-w-4xl">
-        <h1 className="text-5xl font-extrabold text-green-500 mb-12 text-center">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-green-500 mb-8 md:mb-12 text-center">
           {view === "technologies"
             ? "Technologies We Leverage"
             : "Our Products"}
         </h1>
-
         <div className="flex justify-center space-x-4 mb-8">
           <button
             className={`py-2 px-4 rounded-full font-semibold ${
@@ -68,15 +69,13 @@ export default function Technologies() {
             Products
           </button>
         </div>
-
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-10 transform skew-y-6"></div>
-
-          <div className=" grid grid-cols-4 gap-8 place-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 place-items-center">
             {view === "technologies" &&
               technologies.map((tech, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="w-28 h-28 relative">
+                  <div className="w-20 h-20 md:w-28 md:h-28 relative">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
@@ -84,15 +83,17 @@ export default function Technologies() {
                       className="rounded-full object-contain"
                     />
                   </div>
-                  <span className="mt-2 text-base font-bold">{tech.name}</span>
+                  <span className="mt-2 text-sm md:text-base font-bold text-center">
+                    {tech.name}
+                  </span>
                 </div>
               ))}
           </div>
-          <div className=" grid grid-cols-3 gap-8 place-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 place-items-center">
             {view === "products" &&
               products.map((product, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="w-32 h-32 relative">
+                  <div className="w-24 h-24 md:w-32 md:h-32 relative">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -100,10 +101,10 @@ export default function Technologies() {
                       className="rounded-full object-contain"
                     />
                   </div>
-                  <span className="mt-2 text-lg font-extrabold">
+                  <span className="mt-2 text-base md:text-lg font-extrabold text-center">
                     {product.name}
                   </span>
-                  <span className="mt-1 text-base font-normal">
+                  <span className="mt-1 text-sm md:text-base font-normal">
                     {product.price}
                   </span>
                 </div>
