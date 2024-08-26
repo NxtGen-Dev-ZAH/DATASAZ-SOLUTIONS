@@ -15,25 +15,25 @@ const technologies = [
 ];
 
 const products = [
-  { name: "Printers", price: "from 88,900 pkr", image: "/printers.jpeg" },
+  { name: "Printers", price: "from 88,900 PKR", image: "/printers.jpeg" },
   {
     name: "Small scale services",
-    price: "from 10,000 pkr",
+    price: "from 10,000 PKR",
     image: "/services.png",
   },
   {
     name: "Tonner & Cartridges",
-    price: "from 10,00 pkr",
+    price: "from 10,00 PKR",
     image: "/tonner.png",
   },
   // Add more products as needed
   {
     name: "Maintenance Interventions",
-    price: "from 10,000 pkr",
+    price: "from 10,000 PKR",
     image: "/maintaince.png",
   },
-  { name: "Laptop", price: "from 50,000 pkr", image: "/laptop.jpg" },
-  { name: "Computer Parts", price: "from 10,000 pkr", image: "/parts.jpg" },
+  { name: "Laptop", price: "from 50,000 PKR", image: "/laptop.jpg" },
+  { name: "Computer Parts", price: "from 10,000 PKR", image: "/parts.jpg" },
 ];
 
 export default function Technologies() {

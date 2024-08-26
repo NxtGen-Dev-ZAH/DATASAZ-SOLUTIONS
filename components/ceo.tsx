@@ -26,18 +26,20 @@ const CEOMessage: React.FC = () => {
           At DataSAZ Solutions, Our goal is simple yet ambitious: to drive
           growth, enhance efficiency, and unlock the full potential of your
           business. Our team of experts brings together a unique blend of
-          technological innovation and financial acumen. We're not just service
-          providers; we're your partners in success. Whether you're a small
-          startup or an established enterprise, we tailor our solutions to meet
-          your specific needs and help you stay ahead in this fast-paced digital
-          world. Your success is our success, and we are dedicated to exceeding
-          your expectations at every turn.
+          technological innovation and financial acumen. We&apos;re not just
+          service providers; we&apos;re your partners in success. Whether
+          you&apos;re a small startup or an established enterprise, we tailor
+          our solutions to meet your specific needs and help you stay ahead in
+          this fast-paced digital world. Your success is our success, and we are
+          dedicated to exceeding your expectations at every turn.
           <span className="text-5xl text-cyan-800">&apos;&apos;</span>
         </blockquote>
         <p className="text-2xl font-semibold text-green-500 text-right mb-4">
           Adeel Ahmed
         </p>
-        <p className="text-lg text-gray-900 text-right mb-4">CEO, DATASAZ SOLUTIONS</p>
+        <p className="text-lg text-gray-900 text-right mb-4">
+          CEO, DATASAZ SOLUTIONS
+        </p>
       </div>
     </div>
   );
