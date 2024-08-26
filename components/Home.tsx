@@ -13,10 +13,12 @@ const HeroSection = () => {
         </h1>
         <p className="text-gray-600 mb-8 text-lg md:text-xl">
           Empowering businesses with cutting-edge technology and financial
-          expertise 
+          expertise
         </p>
         <button className="bg-green-500 font-bold text-white text-lg py-3 px-6 md:py-4 md:px-8 rounded-full hover:bg-green-600 transition duration-300">
-          <Link href="#about">Learn More</Link>
+          <Link href="#about" target="_blank">
+            Learn More
+          </Link>
         </button>
       </div>
     </div>

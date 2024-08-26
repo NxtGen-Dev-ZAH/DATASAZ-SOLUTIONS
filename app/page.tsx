@@ -13,7 +13,7 @@ export default function Index() {
       <div className="glassy-background">
         <Navbar />
         <div id="home">
-        <Home />
+          <Home />
         </div>
         <div id="services" className="py-12">
           <Services />

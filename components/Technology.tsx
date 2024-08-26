@@ -40,7 +40,7 @@ export default function Technologies() {
   const [view, setView] = useState("technologies");
 
   return (
-    <div className="bg-gradient-to-tl from-green-100 via-white to-green-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4 md:p-8 w-screen">
+    <div className="bg-gradient-to-tl from-green-100 via-white to-green-100 text-gray-800 min-h-screen flex flex-col items-center justify-center p-4 md:p-8 w-screen ">
       <div className="w-full max-w-4xl">
         <h1 className="text-3xl md:text-5xl font-extrabold text-green-500 mb-8 md:mb-12 text-center">
           {view === "technologies"

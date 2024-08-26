@@ -20,10 +20,7 @@ const CEOMessage: React.FC = () => {
             />
           </div>
         </div> */}
-        <p className="text-2xl font-semibold text-green-500 text-left mb-4">
-          Adeel Ahmed
-        </p>
-        <p className="text-lg text-gray-900 text-left mb-4">CEO, DATASAZ</p>
+
         <blockquote className="text-cyan-700 text-xl italic mb-8 px-4">
           <span className="text-5xl text-cyan-800">&apos;&apos;</span>
           At DataSAZ Solutions, Our goal is simple yet ambitious: to drive
@@ -37,6 +34,10 @@ const CEOMessage: React.FC = () => {
           your expectations at every turn.
           <span className="text-5xl text-cyan-800">&apos;&apos;</span>
         </blockquote>
+        <p className="text-2xl font-semibold text-green-500 text-right mb-4">
+          Adeel Ahmed
+        </p>
+        <p className="text-lg text-gray-900 text-right mb-4">CEO, DATASAZ SOLUTIONS</p>
       </div>
     </div>
   );

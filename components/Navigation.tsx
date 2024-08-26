@@ -57,7 +57,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-center items-center w-full md:w-auto py-5 md:py-0 ">
+    <div className="flex flex-col md:flex-row justify-center md:justify-center items-center w-full md:w-auto py-5 md:py-0  ">
       {NavLinks.map((nav) => (
         <a
           key={nav.name}

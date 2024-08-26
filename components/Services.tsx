@@ -50,7 +50,7 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
-    <div className="bg-gradient-to-t from-green-100 via-white to-green-100 min-h-screen w-screen text-gray-800 p-4 md:p-8">
+    <div className="bg-gradient-to-t from-green-100 via-white to-green-100 min-h-screen w-screen text-gray-800 p-4 md:p-8 ">
       <div className="flex justify-center flex-col items-center">
         <h2 className="text-green-500 text-xl mb-2 font-bold tracking-[0.1em]">
           OUR SERVICES

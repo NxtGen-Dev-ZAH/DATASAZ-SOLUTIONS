@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "DataSAZ Solutions",
@@ -17,7 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <body>{children}</body>
     </html>
   );
 }

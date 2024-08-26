@@ -68,6 +68,8 @@ export default function Footer() {
               <a
                 href="https://www.facebook.com/DataSAZSolutions"
                 className="text-gray-400 hover:text-cyan-400"
+                target="_blank"
+
               >
                 <svg
                   className="w-6 h-6"
@@ -84,7 +86,8 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.instagram.com/zaheer_abbasi99
-"
+"  target="_blank"
+
                 className="text-gray-400 hover:text-cyan-400"
               >
                 <svg
@@ -103,6 +106,8 @@ export default function Footer() {
               <a
                 href="https://x.com/DataSAZ"
                 className="text-gray-400 hover:text-cyan-400"
+                target="_blank"
+
               >
                 <svg
                   className="w-6 h-6"
