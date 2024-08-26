@@ -3,7 +3,7 @@ import React from "react";
 export default function ContactUs() {
   return (
     <div className="bg-gradient-to-t from-green-100 via-white to-green-100 text-gray-800  w-screen min-h-screen flex items-center justify-center p-4 md:p-8">
-      <div className="w-full max-w-4xl bg-gray-100 rounded-lg shadow-xl p-6 md:p-8 border border-gray-200">
+      <div className="w-full max-w-4xl bg-transparent rounded-lg shadow-xl p-6 md:p-8 border border-gray-400 border-opacity-50">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-green-500 mb-6">
@@ -87,7 +87,7 @@ export default function ContactUs() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-transparent rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Enter your name"
               />
             </div>
@@ -99,7 +99,7 @@ export default function ContactUs() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-transparent rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Enter your Email"
               />
             </div>
@@ -113,7 +113,7 @@ export default function ContactUs() {
               <textarea
                 id="message"
                 name="message"
-                className="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                className="w-full bg-transparent rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 placeholder="Enter your message"
               ></textarea>
             </div>
