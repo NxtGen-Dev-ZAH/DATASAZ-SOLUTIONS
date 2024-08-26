@@ -35,7 +35,7 @@ const CEOMessage: React.FC = () => {
           <span className="text-5xl text-cyan-800">&apos;&apos;</span>
         </blockquote>
         <p className="text-2xl font-semibold text-green-500 text-right mb-4">
-          Adeel Ahmed
+          Adeel Ahmad
         </p>
         <p className="text-lg text-gray-900 text-right mb-4">
           CEO, DATASAZ SOLUTIONS

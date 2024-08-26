@@ -16,7 +16,7 @@ const HeroSection = () => {
           expertise
         </p>
         <button className="bg-green-500 font-bold text-white text-lg py-3 px-6 md:py-4 md:px-8 rounded-full hover:bg-green-600 transition duration-300">
-          <Link href="#about" target="_blank">
+          <Link href="#about" target="_self">
             Learn More
           </Link>
         </button>

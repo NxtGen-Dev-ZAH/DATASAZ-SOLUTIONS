@@ -81,11 +81,11 @@ const Services = () => {
         <p className="text-gray-600 mb-4 text-base md:text-lg">
           {selectedService.description}
         </p>
-        {selectedService.link && (
+        {/* {selectedService.link && (
           <a href="#" className="text-green-500 text-lg hover:underline">
             Learn More &gt;
           </a>
-        )}
+        )} */}
       </div>
     </div>
   );
