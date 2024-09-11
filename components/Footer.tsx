@@ -69,7 +69,6 @@ export default function Footer() {
                 href="https://www.facebook.com/DataSAZSolutions"
                 className="text-gray-400 hover:text-cyan-400"
                 target="_blank"
-
               >
                 <svg
                   className="w-6 h-6"
@@ -86,8 +85,8 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.instagram.com/zaheer_abbasi99
-"  target="_blank"
-
+"
+                target="_blank"
                 className="text-gray-400 hover:text-cyan-400"
               >
                 <svg
@@ -107,7 +106,6 @@ export default function Footer() {
                 href="https://x.com/DataSAZ"
                 className="text-gray-400 hover:text-cyan-400"
                 target="_blank"
-
               >
                 <svg
                   className="w-6 h-6"
@@ -120,6 +118,20 @@ export default function Footer() {
               </a>
             </div>
           </div>
+        </div>
+        <div className="mt-8">
+          <h4 className="text-md font-semibold mb-4">Our Locations</h4>
+          <iframe
+            src="https://my.atlist.com/map/96a7c212-5b84-455a-8729-f21aa41bf373/?share=true"
+            allow="geolocation 'self' https://my.atlist.com"
+            width="100%"
+            height="275px"
+            loading="lazy"
+            frameBorder="0"
+            scrolling="no"
+            allowFullScreen
+            id="atlist-embed"
+          ></iframe>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
           © 2024 DATASAZ SOLUTIONS. All rights reserved.
