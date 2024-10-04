@@ -119,7 +119,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <h4 className="text-md font-semibold mb-4">Our Locations</h4>
           <iframe
             src="https://my.atlist.com/map/96a7c212-5b84-455a-8729-f21aa41bf373/?share=true"
@@ -132,7 +132,7 @@ export default function Footer() {
             allowFullScreen
             id="atlist-embed"
           ></iframe>
-        </div>
+        </div> */}
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
           © 2024 DATASAZ SOLUTIONS. All rights reserved.
         </div>

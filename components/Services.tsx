@@ -59,7 +59,7 @@ const Services = () => {
           What We Offer
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8 px-8">
         {services.map((service) => (
           <button
             key={service.name}
@@ -74,7 +74,7 @@ const Services = () => {
           </button>
         ))}
       </div>
-      <div className="mb-8">
+      <div className="mb-8 px-8 ">
         <h3 className="text-2xl md:text-3xl font-bold mb-4">
           {selectedService.name}
         </h3>

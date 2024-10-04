@@ -6,6 +6,7 @@ import Technology from "@/components/Technology";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import CEOMessage from "@/components/ceo";
+import TestimonialsAndFAQs from "@/components/Testimonial";
 
 export default function Index() {
   return (
@@ -26,6 +27,9 @@ export default function Index() {
         </div>
         <div id="about" className="py-8">
           <About />
+        </div>
+        <div>
+          <TestimonialsAndFAQs />
         </div>
         <div id="contact" className="py-8">
           <Contact />
