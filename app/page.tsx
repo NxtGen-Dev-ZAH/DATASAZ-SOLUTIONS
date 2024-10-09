@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import CEOMessage from "@/components/ceo";
 import TestimonialsAndFAQs from "@/components/Testimonial";
+import ProfessionalChatbot from "@/components/Chaticon";
 
 export default function Index() {
   return (
@@ -36,6 +37,7 @@ export default function Index() {
         </div>
         <Footer />
       </div>
+      <ProfessionalChatbot />
     </div>
   );
 }
