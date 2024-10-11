@@ -133,30 +133,46 @@ export default function ProfessionalChatbot() {
       <div className="space-y-4">
         <div className="bg-gray-100 p-4 rounded-lg">
           <h4 className="font-semibold mb-2  text-green-400">
-            How do I reset my password?
+            What makes your custom software solutions unique?
           </h4>
           <p className="text-sm text-gray-600">
-            To reset your password, go to the login page and click on the
-            "Forgot Password" link. Follow the instructions sent to your email.
+            DataSAZ Solutions excels in building customized software that is
+            both scalable and highly secure. We employ modern cloud-based
+            architectures, containerization with Docker and Kubernetes, and
+            leverage event-driven microservices for real-time data processing
           </p>
         </div>
         <div className="bg-gray-100 p-4 rounded-lg">
           <h4 className="font-semibold mb-2  text-green-400">
-            What payment methods do you accept?
+            What backend technologies do you work with?
           </h4>
           <p className="text-sm text-gray-600">
-            We accept all major credit cards, PayPal, and bank transfers for
-            business accounts.
+            We have extensive experience with backend technologies such as
+            Python (FastAPI, Flask), SQL databases (PostgreSQL, MySQL), and
+            event streaming platforms like Kafka. This allows us to build
+            robust, scalable systems that meet enterprise demands.
           </p>
         </div>
         <div className="bg-gray-100 p-4 rounded-lg">
           <h4 className="font-semibold mb-2  text-green-400">
-            How can I track my order?
+            How does your AI integration benefit clients?
           </h4>
           <p className="text-sm text-gray-600">
-            Once your order is shipped, you'll receive a tracking number via
-            email. You can use this number on our website or the courier's site
-            to track your package.
+            Our AI-driven solutions provide clients with predictive analytics,
+            automation, and data-driven decision-making capabilities. Whether
+            its enhancing customer experiences or optimizing operations, our AI
+            services are tailored to add measurable value
+          </p>
+        </div>
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <h4 className="font-semibold mb-2  text-green-400">
+            What financial automation solutions do you provide?
+          </h4>
+          <p className="text-sm text-gray-600">
+            We specialize in automating financial tasks like payroll management,
+            bookkeeping, and tax reporting, ensuring that businesses can focus
+            on growth rather than manual processes. Our systems integrate
+            seamlessly with existing business operations for maximum efficiency.
           </p>
         </div>
       </div>
@@ -213,8 +229,8 @@ export default function ProfessionalChatbot() {
         <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
           <Phone size={24} className="text-green-500" />
           <div>
-            <h4 className="font-semibold  text-green-400">Phone Support</h4>
-            <p className="text-sm text-gray-600">+1 (800) 123-4567</p>
+            <h4 className="font-semibold  text-green-400">Whatsapp Support</h4>
+            <p className="text-sm text-gray-600">+92 347 5177267 </p>
             <p className="text-xs text-gray-500">
               Monday - Friday, 9am - 5pm EST
             </p>
@@ -224,7 +240,7 @@ export default function ProfessionalChatbot() {
           <MessageSquare size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">Email Support</h4>
-            <p className="text-sm text-gray-600">support@company.com</p>
+            <p className="text-sm text-gray-600"> datasaz.contact@gmail.com</p>
             <p className="text-xs text-gray-500">
               24/7 support, response within 24 hours
             </p>
