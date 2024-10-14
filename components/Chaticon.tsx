@@ -10,7 +10,7 @@ import {
   Phone,
   User,
   Bot,
-  HelpCircle,
+  ThumbsDown,
   FileText,
   Clock,
 } from "lucide-react";
@@ -34,20 +34,21 @@ export default function ProfessionalChatbot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-  const handleSend = () => {
-    if (inputText.trim()) {
-      setMessages([...messages, { text: inputText, sender: "user" }]);
-      setInputText("");
-      // Simulate bot response
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            text: "Thank you for your inquiry. I'm processing your request and will respond shortly.",
-            sender: "bot",
-          },
-        ]);
-      }, 1000);
+
+  const [isLiked, setIsLiked] = useState(false);
+  const [isDisliked, setIsDisliked] = useState(false);
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+    if (isDisliked) {
+      setIsDisliked(false); // Remove dislike if like is clicked
+    }
+  };
+
+  const handleDislike = () => {
+    setIsDisliked(!isDisliked);
+    if (isLiked) {
+      setIsLiked(false); // Remove like if dislike is clicked
     }
   };
 
@@ -58,6 +59,56 @@ export default function ProfessionalChatbot() {
     ]);
   };
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSend = async () => {
+    if (inputText.trim()) {
+      setMessages((prev) => [...prev, { text: inputText, sender: "user" }]);
+      setInputText("");
+      setIsLoading(true);
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: inputText }),
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        if (!response.body) {
+          throw new Error("Response body is null");
+        }
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let fullText = "";
+        setMessages((prev) => [...prev, { text: "", sender: "bot" }]);
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          const chunk = decoder.decode(value);
+          fullText += chunk;
+          setMessages((prev) => {
+            const newMessages = [...prev];
+            newMessages[newMessages.length - 1].text = fullText;
+            return newMessages;
+          });
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setMessages((prev) => [
+          ...prev,
+          {
+            text: "Sorry, I encountered an error. Please try again later.",
+            sender: "bot",
+          },
+        ]);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+  };
   const renderChatSection = () => (
     <>
       <div className="h-72 overflow-y-auto p-4 space-y-4">
@@ -81,29 +132,16 @@ export default function ProfessionalChatbot() {
             </div>
           </div>
         ))}
+        {isLoading && (
+          <div className="flex justify-start">
+            <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
+              <Bot size={20} className="animate-pulse" />
+            </div>
+          </div>
+        )}
         <div ref={messagesEndRef} />
       </div>
       <div className="p-4 border-t">
-        <div className="flex space-x-2 mb-2">
-          <button
-            onClick={() => handleQuickAction("Technical Support")}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-          >
-            Technical Support
-          </button>
-          <button
-            onClick={() => handleQuickAction("Billing")}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-          >
-            Billing
-          </button>
-          <button
-            onClick={() => handleQuickAction("Sales")}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-          >
-            Sales
-          </button>
-        </div>
         <div className="flex items-center space-x-2">
           <input
             type="text"
@@ -117,6 +155,7 @@ export default function ProfessionalChatbot() {
           <button
             onClick={handleSend}
             className="bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition-colors"
+            disabled={isLoading}
           >
             <Send size={20} />
           </button>
@@ -328,14 +367,24 @@ export default function ProfessionalChatbot() {
           {activeSection === "kb" && renderKnowledgeBaseSection()}
           {activeSection === "contact" && renderContactSection()}
           <div className="bg-gray-50 p-3 flex justify-between items-center text-sm text-gray-500 border-t">
-            <div className="flex items-center space-x-1">
-              <ThumbsUp size={16} />
-              <span>Rate this conversation</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <HelpCircle size={16} />
-              <span>Help</span>
-            </div>
+            <span>How do you like the experience :</span>
+
+            <button onClick={handleLike} className="focus:outline-none">
+              <ThumbsUp
+                size={24}
+                className={`transition-colors ${
+                  isLiked ? "text-pink-500" : "text-gray-400"
+                }`}
+              />
+            </button>
+            <button onClick={handleDislike} className="focus:outline-none">
+              <ThumbsDown
+                size={24}
+                className={`transition-colors ${
+                  isDisliked ? "text-blue-500" : "text-gray-400"
+                }`}
+              />
+            </button>
           </div>
         </div>
       )}
