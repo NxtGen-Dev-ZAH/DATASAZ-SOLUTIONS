@@ -35,19 +35,24 @@ const SimpleNavbar: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/" className="flex items-center group">
-          <div className="relative h-8 w-8 mr-2 overflow-hidden">
+      <Link href="/" className="group transition-all duration-300">
+        <div className="flex items-center">
+          <div className="relative overflow-hidden rounded-full w-10 h-10 group-hover:shadow-md transition-all duration-300">
             <Image
               src="/logo.png"
               alt="DataSAZ Logo"
               fill
-              className="object-contain transition-transform duration-300 group-hover:scale-110"
+              className="object-cover transform group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <span className="text-base md:text-lg font-bold bg-gradient-to-r from-datasaz-green to-datasaz-blue bg-clip-text text-transparent">
-            DataSAZ
-          </span>
-        </Link>
+          <div className="ml-3 sm:ml-4">
+            <h1 className="text-xl font-semibold bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent group-hover:from-green-400 group-hover:to-cyan-400 transition-all duration-300">
+              DataSAZ Solutions
+            </h1>
+            <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-green-500 to-cyan-500 transition-all duration-300"></div>
+          </div>
+        </div>
+      </Link>
 
         <div className="flex items-center space-x-3">
           <Link href="/"

@@ -67,7 +67,8 @@ export default function ProfessionalChatbot() {
       setInputText("");
       setIsLoading(true);
       try {
-        const response = await fetch("/api/chat", {
+        const chatApiUrl = process.env.NEXT_PUBLIC_CHAT_API_URL || 'http://localhost:8000/api/chat';
+        const response = await fetch(chatApiUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -269,7 +270,7 @@ export default function ProfessionalChatbot() {
           <Phone size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">Whatsapp Support</h4>
-            <p className="text-sm text-gray-600">+92 347 5177267 </p>
+            <p className="text-sm text-gray-600">+92 319 3718710 </p>
             <p className="text-xs text-gray-500">
               Monday - Friday, 9am - 5pm EST
             </p>

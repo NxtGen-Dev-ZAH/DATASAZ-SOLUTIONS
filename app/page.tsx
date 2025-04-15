@@ -5,36 +5,53 @@ import Services from "@/components/Services";
 import Technology from "@/components/Technology";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import CEOMessage from "@/components/ceo";
-import TestimonialsAndFAQs from "@/components/Testimonial";
+import Testimonial from "@/components/Testimonial";
 import ProfessionalChatbot from "@/components/Chaticon";
+import AISolutions from "@/components/AISolutions";
+import CaseStudies from "@/components/CaseStudies";
+import Insights from "@/components/Insights";
 
 export default function Index() {
   return (
-    <div className="bg-green-100 min-h-screen w-screen">
+    <div className="neural-bg min-h-screen w-full overflow-x-hidden dark:bg-gray-900">
+      <Navbar />
       <div className="glassy-background">
-        <Navbar />
         <div id="home">
           <Home />
         </div>
-        <div id="services" className="py-12">
+        
+        <div id="services">
           <Services />
         </div>
-        <div id="technology" className="py-8">
+
+        <div id="ai-solutions">
+          <AISolutions />
+        </div>
+        
+        <div id="case-studies">
+          <CaseStudies />
+        </div>
+        
+        <div id="technology">
           <Technology />
         </div>
-        <div id="Ceomessage">
-          <CEOMessage />
-        </div>
-        <div id="about" className="py-8">
+        
+        <div id="about">
           <About />
         </div>
-        <div>
-          <TestimonialsAndFAQs />
+        
+        <div id="insights">
+          <Insights />
         </div>
-        <div id="contact" className="py-8">
+        
+        <div id="testimonials">
+          <Testimonial />
+        </div>
+        
+        <div id="contact">
           <Contact />
         </div>
+        
         <Footer />
       </div>
       <ProfessionalChatbot />

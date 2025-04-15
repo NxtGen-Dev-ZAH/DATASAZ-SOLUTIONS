@@ -28,9 +28,25 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+
 # vercel
 .vercel
+
+# firebase
+firebase.json
+.firebaserc
+.firebase/
+
+# netlify
+.netlify/
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Documentation
+datasazdesign.md 
+datasazdoc.md
+
+/Datasazdoc.pdf
+
