@@ -26,7 +26,7 @@ const testimonials = [
     position: "Director of Innovation, Renograte.com",
     image: "/darren.jpg",
     quote: "Partnering with DataSAZ for our generative AI implementation was a game-changer. Their deep understanding of our business needs and technical expertise resulted in a solution that significantly enhanced our content creation capabilities.",
-    rating: 4
+    rating: 5
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const testimonials = [
     position: "Product Manager, CodeCraft Pakistan",
     image: "/haris.jpeg",
     quote: "DataSAZ delivered a custom AI solution that perfectly aligned with our complex requirements. Their approach to understanding our needs and building an intuitive yet powerful system has given us a significant competitive advantage in the market.",
-    rating: 4
+    rating: 5
   }
 ];
 

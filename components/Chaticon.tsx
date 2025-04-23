@@ -67,7 +67,9 @@ export default function ProfessionalChatbot() {
       setInputText("");
       setIsLoading(true);
       try {
-        const chatApiUrl = process.env.NEXT_PUBLIC_CHAT_API_URL || 'http://localhost:8000/api/chat';
+        const chatApiUrl =
+          process.env.NEXT_PUBLIC_CHAT_API_URL ||
+          "http://localhost:8000/api/chat";
         const response = await fetch(chatApiUrl, {
           method: "POST",
           headers: {
@@ -116,15 +118,14 @@ export default function ProfessionalChatbot() {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`flex ${
-              message.sender === "user" ? "justify-end" : "justify-start"
-            }`}
+            className={`flex
+               ${message.sender === "user" ? "justify-end" : "justify-start"}`}
           >
             <div
               className={`flex items-start space-x-2 max-w-3/4 p-3 rounded-lg ${
                 message.sender === "user"
-                  ? "bg-green-100 text-green-800"
-                  : "bg-gray-100 text-gray-800"
+                  ? "dark:bg-green-800 dark:text-white bg-green-100 text-green-800"
+                  : "dark:bg-gray-700 dark:text-gray-200 bg-gray-100 text-gray-800"
               }`}
             >
               {message.sender === "bot" && <Bot size={20} className="mt-1" />}
@@ -149,7 +150,7 @@ export default function ProfessionalChatbot() {
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             placeholder="Type your message..."
-            className="flex-grow p-2 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="flex-grow p-2 border rounded-lg dark:text-white text-black focus:outline-none focus:ring-2 focus:ring-green-500"
             onKeyDown={(e) => e.key === "Enter" && handleSend()}
           />
 
@@ -171,44 +172,44 @@ export default function ProfessionalChatbot() {
         Frequently Asked Questions
       </h3>
       <div className="space-y-4">
-        <div className="bg-gray-100 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-700 ">
           <h4 className="font-semibold mb-2  text-green-400">
             What makes your custom software solutions unique?
           </h4>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-100">
             DataSAZ Solutions excels in building customized software that is
             both scalable and highly secure. We employ modern cloud-based
             architectures, containerization with Docker and Kubernetes, and
             leverage event-driven microservices for real-time data processing
           </p>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-700">
           <h4 className="font-semibold mb-2  text-green-400">
             What backend technologies do you work with?
           </h4>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-100">
             We have extensive experience with backend technologies such as
             Python (FastAPI, Flask), SQL databases (PostgreSQL, MySQL), and
             event streaming platforms like Kafka. This allows us to build
             robust, scalable systems that meet enterprise demands.
           </p>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-700">
           <h4 className="font-semibold mb-2  text-green-400">
             How does your AI integration benefit clients?
           </h4>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-100">
             Our AI-driven solutions provide clients with predictive analytics,
             automation, and data-driven decision-making capabilities. Whether
             its enhancing customer experiences or optimizing operations, our AI
             services are tailored to add measurable value
           </p>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg dark:bg-gray-700">
           <h4 className="font-semibold mb-2  text-green-400">
             What financial automation solutions do you provide?
           </h4>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-100">
             We specialize in automating financial tasks like payroll management,
             bookkeeping, and tax reporting, ensuring that businesses can focus
             on growth rather than manual processes. Our systems integrate
@@ -225,33 +226,35 @@ export default function ProfessionalChatbot() {
         Knowledge Base
       </h3>
       <div className="space-y-4">
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 dark:bg-gray-700">
           <FileText size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">
               Getting Started Guide
             </h4>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 dark:text-gray-100">
               Learn the basics of our platform
             </p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 dark:bg-gray-700">
           <FileText size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">API Documentation</h4>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 dark:text-gray-100">
+              Explore our API capabilities
+              <br />
               Detailed guide for developers
             </p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 dark:bg-gray-700">
           <FileText size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">
               Troubleshooting Common Issues
             </h4>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 dark:text-gray-100">
               Solutions to frequent problems
             </p>
           </div>
@@ -266,35 +269,44 @@ export default function ProfessionalChatbot() {
         Contact Information
       </h3>
       <div className="space-y-4">
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 dark:bg-gray-700">
           <Phone size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">Whatsapp Support</h4>
-            <p className="text-sm text-gray-600">+92 319 3718710 </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-sm text-gray-600 dark:text-gray-100">
+              +92 319 3718710{" "}
+            </p>
+            <p className="text-xs text-gray-500  dark:text-gray-100">
               Monday - Friday, 9am - 5pm EST
             </p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 dark:bg-gray-700">
           <MessageSquare size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">Email Support</h4>
-            <p className="text-sm text-gray-600"> datasaz.contact@gmail.com</p>
-            <p className="text-xs text-gray-500">
+            <p className="text-sm text-gray-600  dark:text-gray-100">
+              {" "}
+              datasaz.contact@gmail.com
+            </p>
+            <p className="text-xs text-gray-500  dark:text-gray-100">
               24/7 support, response within 24 hours
             </p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4">
+        <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 dark:bg-gray-700">
           <Clock size={24} className="text-green-500" />
           <div>
             <h4 className="font-semibold  text-green-400">Business Hours</h4>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 dark:text-gray-100">
               Monday - Friday: 9am - 6pm EST
             </p>
-            <p className="text-sm text-gray-600">Saturday: 10am - 4pm EST</p>
-            <p className="text-sm text-gray-600">Sunday: Closed</p>
+            <p className="text-sm text-gray-600 dark:text-gray-100">
+              Saturday: 10am - 4pm EST
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-100">
+              Sunday: Closed
+            </p>
           </div>
         </div>
       </div>
@@ -311,8 +323,8 @@ export default function ProfessionalChatbot() {
           <MessageSquare size={24} />
         </button>
       ) : (
-        <div className="bg-white rounded-lg shadow-xl w-80 sm:w-96 overflow-hidden">
-          <div className="bg-green-500 text-white p-4 flex justify-between items-center">
+        <div className="bg-white dark:bg-gray-900 text-black dark:text-white rounded-lg shadow-xl w-[28rem] h-[36rem] overflow-hidden">
+          <div className="bg-gradient-to-r from-green-600 via-green-400 to-cyan-600 text-white p-4 flex justify-between items-center ">
             <h2 className="text-lg font-semibold">Professional Support</h2>
             <div className="flex space-x-2">
               <button
@@ -329,35 +341,43 @@ export default function ProfessionalChatbot() {
               </button>
             </div>
           </div>
-          <div className="flex border-b">
+          <div className="flex border-b dark:border-gray-700">
             <button
               onClick={() => setActiveSection("chat")}
-              className={`flex-1 py-2 px-4 text-center text-black ${
-                activeSection === "chat" ? "bg-gray-100 font-semibold" : ""
+              className={`flex-1 py-2 px-4 text-center ${
+                activeSection === "chat"
+                  ? "bg-gray-100 dark:bg-gray-700 font-semibold"
+                  : ""
               }`}
             >
               Chat
             </button>
             <button
               onClick={() => setActiveSection("faq")}
-              className={`flex-1 py-2 px-4 text-center text-black ${
-                activeSection === "faq" ? "bg-gray-100 font-semibold" : ""
+              className={`flex-1 py-2 px-4 text-center ${
+                activeSection === "faq"
+                  ? "bg-gray-100 dark:bg-gray-700 font-semibold"
+                  : ""
               }`}
             >
               FAQ
             </button>
             <button
               onClick={() => setActiveSection("kb")}
-              className={`flex-1 py-2 px-4 text-center text-black  ${
-                activeSection === "kb" ? "bg-gray-100 font-semibold" : ""
+              className={`flex-1 py-2 px-4 text-center ${
+                activeSection === "kb"
+                  ? "bg-gray-100 dark:bg-gray-700 font-semibold"
+                  : ""
               }`}
             >
               Knowledge Base
             </button>
             <button
               onClick={() => setActiveSection("contact")}
-              className={`flex-1 py-2 px-4 text-center text-black ${
-                activeSection === "contact" ? "bg-gray-100 font-semibold" : ""
+              className={`flex-1 py-2 px-4 text-center ${
+                activeSection === "contact"
+                  ? "bg-gray-100 dark:bg-gray-700 font-semibold"
+                  : ""
               }`}
             >
               Contact
@@ -367,9 +387,8 @@ export default function ProfessionalChatbot() {
           {activeSection === "faq" && renderFAQSection()}
           {activeSection === "kb" && renderKnowledgeBaseSection()}
           {activeSection === "contact" && renderContactSection()}
-          <div className="bg-gray-50 p-3 flex justify-between items-center text-sm text-gray-500 border-t">
-            <span>How do you like the experience :</span>
-
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 border-t dark:border-gray-700">
+            <span>How do you like the experience:</span>
             <button onClick={handleLike} className="focus:outline-none">
               <ThumbsUp
                 size={24}
